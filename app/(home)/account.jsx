@@ -4,7 +4,6 @@ import ProfilePage from '../../components/ProfilePage'
 import {users} from '../../api/user'
 export default function UserAccount() {
   const handleUpdateProfile = (updatedUser) => {
-    // Replace this with your update logic
     Alert.alert('Profile Updated', `Profile for ${updatedUser.name} has been updated.`);
   };
   return (

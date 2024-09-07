@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { View, Text, TextInput, Button, StyleSheet, ScrollView } from 'react-native';
+import { useState } from 'react';
+import { Text, TextInput, Button, StyleSheet, View } from 'react-native';
 
 const ProfilePage = ({ user, onUpdateProfile }) => {
   const [name, setName] = useState(user.name);
@@ -23,8 +23,9 @@ const ProfilePage = ({ user, onUpdateProfile }) => {
   };
 
   return (
-    <ScrollView style={styles.container}>
+    <View style={styles.container}>
       <Text style={styles.title}>Edit Profile</Text>
+      <TextInput/>
       <TextInput
         style={styles.input}
         value={name}
@@ -64,7 +65,7 @@ const ProfilePage = ({ user, onUpdateProfile }) => {
         keyboardType="numeric"
       />
       <Button title="Save Changes" onPress={handleUpdate} />
-    </ScrollView>
+    </View>
   );
 };
 
@@ -81,7 +82,7 @@ const styles = StyleSheet.create({
   },
   input: {
     height: 40,
-    borderColor: '#ddd',
+    borderColor: '#070800',
     borderWidth: 1,
     borderRadius: 4,
     marginBottom: 15,

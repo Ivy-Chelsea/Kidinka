@@ -32,17 +32,7 @@ const HomeLayout = () => {
           options={{
             tabBarIcon: ()=>(
               <>
-              <Text>Profile</Text>
-              </>
-            )
-          }}
-        />
-        <Tabs.Screen
-          name='saved'
-          options={{
-            tabBarIcon: ()=>(
-              <>
-              <Text>Saved</Text>
+              <Text>Profiles</Text>
               </>
             )
           }}

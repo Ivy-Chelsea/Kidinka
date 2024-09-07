@@ -1,7 +1,7 @@
 import React from 'react';
 import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
 
-const JobCard = ({ job }) => {
+const JobCard = ({ job, handleJobPress }) => {
   return (
     <View style={styles.card}>
       <Text style={styles.title}>{job.title}</Text>
@@ -9,7 +9,7 @@ const JobCard = ({ job }) => {
       <Text style={styles.location}>{job.location}</Text>
       <Text style={styles.experienceLevel}>{job.experience_level}</Text>
       <Text style={styles.salaryRange}>Salary: {job.salary_range}</Text>
-      <TouchableOpacity style={styles.applyButton} onPress={() => console.log(`Apply for job ID: ${job.id}`)}>
+      <TouchableOpacity style={styles.applyButton} onPress={() => handleJobPress(job)}>
         <Text style={styles.buttonText}>Apply Now</Text>
       </TouchableOpacity>
     </View>

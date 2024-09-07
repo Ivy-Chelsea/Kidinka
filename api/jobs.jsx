@@ -12,7 +12,8 @@ export const jobs = [
     industry: "Information Technology",
     applicants: 45,
     remote: true,
-    url: "https://www.linkedin.com/jobs/view/1"
+    url: "https://www.linkedin.com/jobs/view/1",
+    status:"Saved"
   },
   {
     id: "2",
@@ -27,7 +28,8 @@ export const jobs = [
     industry: "Software",
     applicants: 60,
     remote: false,
-    url: "https://www.linkedin.com/jobs/view/2"
+    url: "https://www.linkedin.com/jobs/view/2",
+    status:"Saved"
   },
   {
     id: "3",
@@ -42,7 +44,8 @@ export const jobs = [
     industry: "Data Analytics",
     applicants: 20,
     remote: true,
-    url: "https://www.linkedin.com/jobs/view/3"
+    url: "https://www.linkedin.com/jobs/view/3",
+    status:"Saved"
   },
   {
     id: "4",
@@ -72,7 +75,8 @@ export const jobs = [
     industry: "Marketing",
     applicants: 25,
     remote: true,
-    url: "https://www.linkedin.com/jobs/view/5"
+    url: "https://www.linkedin.com/jobs/view/5",
+    status:"In progress"
   },
   {
     id: "6",
@@ -87,7 +91,8 @@ export const jobs = [
     industry: "Cloud Computing",
     applicants: 50,
     remote: true,
-    url: "https://www.linkedin.com/jobs/view/6"
+    url: "https://www.linkedin.com/jobs/view/6",
+    status:"Applied"
   },
   {
     id: "7",
@@ -117,7 +122,8 @@ export const jobs = [
     industry: "Retail",
     applicants: 40,
     remote: false,
-    url: "https://www.linkedin.com/jobs/view/8"
+    url: "https://www.linkedin.com/jobs/view/8",
+    status:"Applied"
   },
   {
     id: "9",
