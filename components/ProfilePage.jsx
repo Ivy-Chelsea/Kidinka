@@ -1,6 +1,14 @@
 import { useState } from 'react';
 import { Text, TextInput, Button, StyleSheet, View } from 'react-native';
 
+/**
+ * ProfilePage component for editing user profile.
+ * 
+ * @param {Object} props - The component props.
+ * @param {Object} props.user - The user object containing profile information.
+ * @param {Function} props.onUpdateProfile - The function to handle profile update.
+ * @returns {JSX.Element} The rendered ProfilePage component.
+ */
 const ProfilePage = ({ user, onUpdateProfile }) => {
   const [name, setName] = useState(user.name);
   const [email, setEmail] = useState(user.email);
