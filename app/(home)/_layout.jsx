@@ -2,6 +2,11 @@ import {  StyleSheet, Text, View } from 'react-native'
 import React from 'react'
 import { Tabs } from 'expo-router'
 
+/**
+ * HomeLayout component.
+ *
+ * @returns {JSX.Element} The rendered HomeLayout component.
+ */
 const HomeLayout = () => {
   return (
     <Tabs screenOptions={{
