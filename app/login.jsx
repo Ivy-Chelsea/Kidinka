@@ -10,7 +10,6 @@ import { Button } from "react-native-web";
   const login = () => {
     return (
       <View style={{backgroundColor:'#ff0011', flex: 1 }}>
-            <Link href='/login'>
               <TouchableOpacity onpress={()=>{console.log('login')}}>
               <Text style={styles.link}>kidinka</Text>
                 </TouchableOpacity>
@@ -21,9 +20,6 @@ import { Button } from "react-native-web";
                 borderRadius: 5
 
               }}/>
-            </Link>     
-        <View>          
-          </View>      
       </View>
     );
   };
