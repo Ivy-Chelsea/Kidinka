@@ -1,6 +1,20 @@
 // import React from 'react';
 import { View, Text, StyleSheet, Image } from 'react-native';
 
+/**
+ * Renders a user profile card.
+ *
+ * @component
+ * @param {Object} user - The user object containing user details.
+ * @param {string} user.name - The name of the user.
+ * @param {string} user.occupation - The occupation of the user.
+ * @param {string} user.email - The email of the user.
+ * @param {string} user.location - The location of the user.
+ * @param {string} user.company - The company of the user.
+ * @param {number} user.age - The age of the user.
+ * @param {boolean} user.isActive - The status of the user (active or inactive).
+ * @returns {JSX.Element} The rendered user profile card.
+ */
 const UserProfile = ({ user }) => {
   return (
     <View style={styles.card}>
