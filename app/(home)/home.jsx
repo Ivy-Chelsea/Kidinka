@@ -13,6 +13,12 @@ const filters = [
   "Archived"
 ];
 
+/**
+ * Home component.
+ *
+ * @component
+ * @returns {JSX.Element} The rendered Home component.
+ */
 const Home = () => {
   const [selectedJob, setSelectedJob] = React.useState(null);
   const handleJobPress = (job) => {
