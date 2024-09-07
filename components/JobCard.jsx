@@ -1,6 +1,13 @@
 import React from 'react';
 import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
 
+/**
+ * JobCard component.
+ *
+ * @param {Object} job - The job object.
+ * @param {Function} handleJobPress - The function to handle job press.
+ * @returns {JSX.Element} - The rendered JobCard component.
+ */
 const JobCard = ({ job, handleJobPress }) => {
   return (
     <View style={styles.card}>
