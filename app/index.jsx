@@ -5,6 +5,11 @@ import {
 } from "react-native";
 import React from "react";
 import { Link } from "expo-router";
+/**
+ * Renders the index component.
+ *
+ * @returns {JSX.Element} The rendered index component.
+ */
 const index = () => {
   return (
     <View style={styles.container}>
