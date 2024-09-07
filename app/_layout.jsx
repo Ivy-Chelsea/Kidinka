@@ -2,6 +2,11 @@ import { View, Text, Image, TouchableNativeFeedback, ImageBackground } from 'rea
 import React from 'react'
 import { Stack } from 'expo-router'
 
+/**
+ * IndexLayout component.
+ *
+ * @returns {JSX.Element} The rendered IndexLayout component.
+ */
 const IndexLayout = () => {
   return (
     <Stack screenOptions={{headerShown:false}}>
