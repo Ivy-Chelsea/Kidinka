@@ -23,14 +23,36 @@ const HomeLayout = () => {
               fontWeight:'800'
             },
             tabBarIcon: ()=>(<>
+              <Text>Home</Text>
             </>),
         }}        
+        />
+        <Tabs.Screen
+          name='profiles'
+          options={{
+            tabBarIcon: ()=>(
+              <>
+              <Text>Profile</Text>
+              </>
+            )
+          }}
+        />
+        <Tabs.Screen
+          name='saved'
+          options={{
+            tabBarIcon: ()=>(
+              <>
+              <Text>Saved</Text>
+              </>
+            )
+          }}
         />
         <Tabs.Screen
           name='account'
           options={{
             tabBarIcon: ()=>(
               <>
+              <Text>Account</Text>
               </>
             )
           }}
