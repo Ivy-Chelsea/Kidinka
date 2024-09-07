@@ -3,6 +3,11 @@ import React from 'react'
 import { users } from '../../api/user'
 import UserProfile from '../../components/UserCard'
 
+/**
+ * Renders a list of user profiles.
+ *
+ * @returns {JSX.Element} The rendered component.
+ */
 const Users1 = () => {
   return (
     <View>
