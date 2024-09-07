@@ -4,7 +4,7 @@ import { Stack } from 'expo-router'
 
 /**
  * IndexLayout component.
- *
+ *mnbv
  * @returns {JSX.Element} The rendered IndexLayout component.
  */
 const IndexLayout = () => {
