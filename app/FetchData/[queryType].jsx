@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { View, Text, ActivityIndicator, StyleSheet } from "react-native";
+import { View, Text, ActivityIndicator, StyleSheet, Image, ImageBackground } from "react-native";
 import { useRoute, useNavigation } from "@react-navigation/native";
 import QRCode from "react-native-qrcode-svg";
 import axios from "axios";
@@ -118,20 +118,24 @@ const VerificationPage = () => {
     return (
       <View style={styles.centered}>
         <ActivityIndicator size="large" color="#0000ff" />
+        
         <Text>Loading...</Text>
       </View>
     );
   }
 
   return (
-    <View style={styles.container}>
-      <Text style={styles.heading}>{route.params.queryType}</Text>
+    <ImageBackground source={require('../../assets/bg.jpg')} resizeMode="cover" style={{flex:1 }}>
+    <View style={styles.container} >
+      <Text style={styles.heading}>Sign in with</Text>
+      <Image style={{width: 200, height: 50, backgroundColor:"white", margin:20, borderRadius:20, opacity:0.8}} source={require('../../assets/privado.png')} resizeMode='contain'/>
       <View style={styles.qrCodeContainer}>
         <Link href={"home"}>
         <QRCode value={verificationQuery} size={300} />
         </Link>
       </View>
     </View>
+    </ImageBackground>
   );
 };
 
@@ -149,12 +153,14 @@ const styles = StyleSheet.create({
   },
   heading: {
     fontSize: 24,
-    fontWeight: "bold",
-    marginBottom: 20,
+    fontWeight: "400",
+    padding:10,
+    color:"#efefef"
   },
   qrCodeContainer: {
     backgroundColor: "#eee",
-    padding: 20,
+    padding: 1,
+    fontSize:16,
   },
 });
 

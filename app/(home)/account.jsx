@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { FlatList, View, Text, Button, StyleSheet, TextInput, TouchableOpacity } from 'react-native';
 import ActionSheet from 'react-native-actions-sheet';
-
 // ProfilePage Component
 const ProfilePage = ({ user }) => {
   return (
@@ -14,39 +13,38 @@ const ProfilePage = ({ user }) => {
 
 // Main Component
 const UserAccounts = () => {
-  const [users] = useState([{ id: '1', name: 'John Doe', email: 'john@example.com' }]);
+  const [users] = useState([{ id: '1', name: 'Stevene Masongo', email: 'stevene.masongo@gmail.com' }]);
   const [documents, setDocuments] = useState([
-    { id: '1', title: 'Bachelor of Science', institution: 'University X', year: '2020' },
-    { id: '2', title: 'Masters in Computer Science', institution: 'University Y', year: '2022' },
+    { id: '1', title: 'Bachelor of Science', institution: 'University X', year: '2020', verified: true },
+    { id: '2', title: 'Masters in Computer Science', institution: 'University Y', year: '2022', verified: true },
   ]);
-  const [fullName, setFullName] = useState('');
+  const [fullCourceName, setfullCourceName] = useState('');
   const [institution, setInstitution] = useState('');
   const [graduationYear, setGraduationYear] = useState('');
   const actionSheetRef = React.useRef(null);
 
-  // Function to add new certificate
   const handleAddCertificate = () => {
-    if (fullName && institution && graduationYear) {
+    if (fullCourceName && institution && graduationYear) {
       const newCertificate = {
         id: (documents.length + 1).toString(),
-        title: fullName,
+        title: fullCourceName,
         institution: institution,
         year: graduationYear,
       };
       setDocuments([...documents, newCertificate]);
-      setFullName('');
+      setfullCourceName('');
       setInstitution('');
       setGraduationYear('');
       actionSheetRef.current?.hide();
     }
   };
 
-  // Render each document in FlatList
   const renderItem = ({ item }) => (
     <View style={styles.documentItem}>
       <Text>{item.title}</Text>
       <Text>{item.institution}</Text>
       <Text>{item.year}</Text>
+      <Text>{item.verified?"verified":"?"}</Text>
     </View>
   );
 
@@ -60,8 +58,9 @@ const UserAccounts = () => {
         ListFooterComponent={() => (
           <View style={styles.footer}>
             <Button
+            style={styles.addButtonText}
               title="Add More Certificates"
-              onPress={() => actionSheetRef.current?.setModalVisible()}
+              onPress={() => actionSheetRef.current?.setModalVisible(true)}
             />
           </View>
         )}
@@ -70,12 +69,12 @@ const UserAccounts = () => {
       {/* Action Sheet Form */}
       <ActionSheet ref={actionSheetRef}>
         <View style={styles.formContainer}>
-          <Text style={styles.formLabel}>Full Name</Text>
+          <Text style={styles.formLabel}>Course Name</Text>
           <TextInput
             style={styles.input}
-            value={fullName}
-            onChangeText={setFullName}
-            placeholder="Enter full name"
+            value={fullCourceName}
+            onChangeText={setfullCourceName}
+            placeholder="Course name"
           />
           <Text style={styles.formLabel}>Institution</Text>
           <TextInput
@@ -150,7 +149,7 @@ const styles = StyleSheet.create({
     marginBottom: 16,
   },
   addButton: {
-    backgroundColor: '#007bff',
+    backgroundColor: '#ff0000',
     padding: 12,
     borderRadius: 5,
     alignItems: 'center',
