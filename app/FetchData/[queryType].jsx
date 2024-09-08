@@ -4,6 +4,7 @@ import { useRoute, useNavigation } from "@react-navigation/native";
 import QRCode from "react-native-qrcode-svg";
 import axios from "axios";
 import AsyncStorage from "@react-native-async-storage/async-storage";
+import { Link } from "expo-router";
 
 const BACKEND_VERIFIER_API_URL = "https://privado.furnitureelegancengara.com";
 
@@ -50,7 +51,7 @@ const VerificationPage = () => {
         console.error("Error: Expected JSON response");
       }
     } catch (error) {
-      console.error("Error:", error);
+      console.error("Error-:", error);
     } finally {
       setLoading(false);
     }
@@ -90,7 +91,7 @@ const VerificationPage = () => {
         navigation.navigate("account");
       }
     } catch (error) {
-      console.error("Error:", error);
+      // console.error("Error:", error);
     }
   };
 
@@ -126,7 +127,9 @@ const VerificationPage = () => {
     <View style={styles.container}>
       <Text style={styles.heading}>{route.params.queryType}</Text>
       <View style={styles.qrCodeContainer}>
+        <Link href={"home"}>
         <QRCode value={verificationQuery} size={300} />
+        </Link>
       </View>
     </View>
   );
